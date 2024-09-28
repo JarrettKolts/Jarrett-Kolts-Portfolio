@@ -1,0 +1,124 @@
+:root {
+    --text-color: white;
+    --hover-text-color: rgb(0, 225, 255);
+    --background-color: darkblue;
+    --border-color: rgb(2, 216, 13);
+    --shadow-color: rgb(15, 12, 168);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    height: 100px;
+    background-color: var(--background-color);
+    margin-bottom: 30px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+
+.links{
+color: var(--text-color);
+margin-left: 15px;
+}
+
+.links:hover {
+    color: var(--hover-text-color);
+}
+
+.card {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    background-color: var(--background-color);
+    width: 300px; /* Fixed width for larger screens */
+    font-size: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    margin: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* Add padding */
+}
+
+/* Optional: Style for paragraphs within the card */
+.card p {
+    margin: 0; /* Remove default margin from paragraphs */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .card {
+        width: 90%; /* Use a percentage width for mobile */
+        margin: 10px auto; /* Center the card with auto margins */
+        font-size: 18px; /* Optionally reduce font size */
+        padding: 15px; /* Adjust padding for better spacing */
+    }
+}
+
+.card:hover {
+    box-shadow: 0 8px 30px var(--shadow-color);
+    height: 160px;
+}
+
+.footer {
+    position: sticky;
+    top:100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+#resume {
+    margin-bottom: 50px;
+}
+#resume:hover {
+    color: var(--hover-text-color);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.25),
+        rgb(0 0 139 / 75%)
+    )
+}
+
+#projects {
+    margin-bottom: 50px;
+}
+
+#projects:hover {
+    color: var(--hover-text-color);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.25),
+        rgb(0 0 139 / 75%)
+    )
+}
+
+#skills {
+    margin-bottom: 50px;
+}
+
+#skills:hover {
+    color: var(--hover-text-color);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.25),
+        rgb(0 0 139 / 75%)
+    )
+}
