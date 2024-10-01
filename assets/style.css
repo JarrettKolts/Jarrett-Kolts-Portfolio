@@ -45,7 +45,7 @@ margin-left: 15px;
     display: flex;
     flex-direction: column; /* Stack content vertically */
     background-color: var(--background-color);
-    width: 300px; /* Fixed width for larger screens */
+    width: 95%; /* Fixed width for larger screens */
     font-size: 20px;
     border: 2px solid var(--border-color);
     border-radius: 10px;
@@ -73,7 +73,8 @@ margin-left: 15px;
 
 .card:hover {
     box-shadow: 0 8px 30px var(--shadow-color);
-    height: 160px;
+    height: 80px;
+    transform: scale(1.01);
 }
 
 .footer {
@@ -89,6 +90,7 @@ margin-left: 15px;
     margin-bottom: 50px;
 }
 #resume:hover {
+    font-size: 24pt;
     color: var(--hover-text-color);
     background-image: linear-gradient(
         to bottom,
@@ -102,12 +104,14 @@ margin-left: 15px;
 }
 
 #projects:hover {
+    cursor: pointer;
+    font-size: 24pt;
     color: var(--hover-text-color);
     background-image: linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.25),
         rgb(0 0 139 / 75%)
-    )
+        )
 }
 
 #skills {
@@ -115,6 +119,7 @@ margin-left: 15px;
 }
 
 #skills:hover {
+    font-size: 24pt;
     color: var(--hover-text-color);
     background-image: linear-gradient(
         to bottom,
@@ -122,3 +127,28 @@ margin-left: 15px;
         rgb(0 0 139 / 75%)
     )
 }
+
+.card-static {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    background-color: var(--background-color);
+    width: 95%; /* Fixed width for larger screens */
+    font-size: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    margin: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px; /* Add padding */
+    align-items: center;
+}
+
+.card-static:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; 
+    height: auto !important; 
+    transform: none !important; 
+    transition: none !important;
+}
+
